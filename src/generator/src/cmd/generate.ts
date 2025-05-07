@@ -264,6 +264,10 @@ async function buildTypeIndex(logger: ILogger, baseDir: string, apiVersion: ApiV
   function addConfigToContent(content: string): any[] {
     const contentTypes = JSON.parse(content) as any[];
     const relationshipType = contentTypes.find(type => type["$type"] === TypeBaseKind.ObjectType && type["name"] === 'MicrosoftGraphRelationship');
+    if (!relationshipType) {
+      // If the relationship type is not found, we don't need to add the config type
+      return contentTypes;
+    }
     const relationshipSemanticsType = relationshipType.properties['relationshipSemantics'];
     const configType = {
       $type: TypeBaseKind.ObjectType,
