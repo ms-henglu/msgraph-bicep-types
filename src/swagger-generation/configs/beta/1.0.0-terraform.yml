@@ -1,0 +1,22 @@
+MetadataFilePath: clean_v10_metadata/cleanMetadataWithDescriptionsAndAnnotationsv1.0.xml
+ExtensionVersion: 0.1.0-terraform
+EntityTypes:
+  - Name: microsoft.graph.user
+    RootUri: /users
+  - Name: microsoft.graph.group
+    RootUri: /groups
+  # The following entity types are not supported by the swagger generation tool:
+  # - Name: microsoft.graph.groupMember
+  #   RootUri: /groups/members
+  #   ContainerEntitySet: groups
+  - Name: microsoft.graph.application
+    RootUri: /applications
+  - Name: microsoft.graph.servicePrincipal
+    RootUri: /servicePrincipals
+  - Name: microsoft.graph.federatedIdentityCredential
+    RootUri: /applications/federatedIdentityCredentials
+    ContainerEntitySet: applications
+  - Name: microsoft.graph.oAuth2PermissionGrant
+    RootUri: /oauth2PermissionGrants
+  - Name: microsoft.graph.appRoleAssignment
+    RootUri: /appRoleAssignedTo

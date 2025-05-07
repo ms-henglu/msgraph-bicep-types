@@ -594,5 +594,103 @@
         ]
       }
     }
+  },
+  "1.0.0-terraform": {
+    "users": {
+      "beta": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "userPrincipalName",
+        "isContainment": false
+      },
+      "v1.0": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "userPrincipalName",
+        "isContainment": false
+      }
+    },
+    "groups": {
+      "beta": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "uniqueName",
+        "isContainment": false
+      },
+      "v1.0": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "uniqueName",
+        "isContainment": false
+      }
+    },
+    "applications": {
+      "beta": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "uniqueName",
+        "isContainment": false
+      },
+      "v1.0": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "uniqueName",
+        "isContainment": false
+      }
+    },
+    "servicePrincipals": {
+      "beta": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "appId",
+        "isContainment": false
+      },
+      "v1.0": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "appId",
+        "isContainment": false
+      }
+    },
+    "applications/federatedIdentityCredentials": {
+      "beta": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "name",
+        "isContainment": true,
+        "containerEntitySet": "applications"
+      },
+      "v1.0": {
+        "isIdempotent": false,
+        "updatable": false,
+        "alternateKey": "name",
+        "isContainment": true,
+        "containerEntitySet": "applications"
+      }
+    },
+    "oauth2PermissionGrants": {
+      "beta": {
+        "isIdempotent": false,
+        "updatable": false,
+        "isContainment": false
+      },
+      "v1.0": {
+        "isIdempotent": false,
+        "updatable": false,
+        "isContainment": false
+      }
+    },
+    "appRoleAssignedTo": {
+      "beta": {
+        "isIdempotent": false,
+        "updatable": false,
+        "isContainment": false
+      },
+      "v1.0": {
+        "isIdempotent": false,
+        "updatable": false,
+        "isContainment": false
+      }
+    }
   }
 }
