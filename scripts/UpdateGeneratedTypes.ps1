@@ -38,12 +38,12 @@ Write-Host "Autorest successfully built"
 Write-Host "Generating Swagger spec"
 npm ci --prefix $SwaggerGenerationPrefix
 npm audit fix
-npm run --prefix $SwaggerGenerationPrefix start "--" --output=C:\Git\msgraph-bicep-types\swagger\specification\microsoftgraph\resource-manager\microsoftgraph\preview
+npm run --prefix $SwaggerGenerationPrefix start "--" --output=../../swagger/specification/microsoftgraph/resource-manager/microsoftgraph/preview
 Write-Host "Swagger spec successfully generated"
 
 # Generate Bicep types
 Write-Host "Generating Bicep types"
 npm ci --prefix $GeneratorPrefix
 npm audit fix
-npm run --prefix $GeneratorPrefix generate "--" --specs-dir ..\..\swagger\ --single-path microsoftgraph
+npm run --prefix $GeneratorPrefix generate "--" --specs-dir ../../swagger/ --single-path microsoftgraph
 write-Host "Bicep types successfully generated"
